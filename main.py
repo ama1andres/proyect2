@@ -1,7 +1,10 @@
-from proyect2.file_manager import FileManager
-from proyect2.movimientos_manager import MovimientosManager
+
+
+from file_manager import FileManager
+from movimientos_manager import MovimientosManager
 from gui_manager import GUIManager
 import PySimpleGUI as sg
+
 
 def main():
     # Cargar datos
@@ -14,7 +17,7 @@ def main():
     #  eventos
     def handle_event(window, event, values):
         # Agregar Categoria
-        if event == "Agregar Categoria":
+        if event == "Agregar categoria":
             category = sg.popup_get_text("Ingrese la nueva categoria:")
             if category:
                 try:
@@ -26,7 +29,7 @@ def main():
                     sg.popup_error(str(e))
         
         # Agregar Gasto
-        elif event == "Agregar Gasto":
+        elif event == "Agregar gasto":
             title = sg.popup_get_text("Ingrese el titulo del gasto:")
             amount = sg.popup_get_text("Ingrese el monto del gasto:")
             category = sg.popup_get_text("Ingrese la categoria del gasto o seleccione una existente:", default_text=", ".join(data["categorias"]))
@@ -41,7 +44,7 @@ def main():
                     sg.popup_error(str(e))
 
         # Agregar Ingreso
-        elif event == "Agregar Ingreso":
+        elif event == "Agregar ingreso":
             title = sg.popup_get_text("Ingrese el titulo del ingreso:")
             amount = sg.popup_get_text("Ingrese el monto del ingreso:")
             category = sg.popup_get_text("Ingrese la categoria del ingreso o seleccione una existente:", default_text=", ".join(data["categorias"]))
@@ -59,4 +62,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
