@@ -36,3 +36,4 @@ class MovimientosManager:
         else:
             raise ValueError("La categoraa no existe.")
         return self.data
+
