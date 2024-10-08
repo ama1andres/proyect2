@@ -29,7 +29,6 @@ def main():
         elif event == "Agregar Gasto":
             title = sg.popup_get_text("Ingrese el titulo del gasto:")
             amount = sg.popup_get_text("Ingrese el monto del gasto:")
-            # Ahora podemos seleccionar la categoría directamente desde las disponibles
             category = sg.popup_get_text("Ingrese la categoria del gasto o seleccione una existente:", default_text=", ".join(data["categorias"]))
 
             if title and amount and category:
@@ -45,7 +44,6 @@ def main():
         elif event == "Agregar Ingreso":
             title = sg.popup_get_text("Ingrese el titulo del ingreso:")
             amount = sg.popup_get_text("Ingrese el monto del ingreso:")
-            # Ahora podemos seleccionar la categoría directamente desde las disponibles
             category = sg.popup_get_text("Ingrese la categoria del ingreso o seleccione una existente:", default_text=", ".join(data["categorias"]))
 
             if title and amount and category:
